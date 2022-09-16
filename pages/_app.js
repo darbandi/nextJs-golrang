@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import MUIProvider from "src/providers/MUIProvider";
 import { Provider } from "react-redux";
 import store from "src/store";
@@ -9,14 +8,6 @@ import { SnackbarProvider } from "notistack";
 import TranslateProvider from "src/providers/TranslateProvider";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-
-  useEffect(() => {
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
-
   return (
     <>
       <Head>
